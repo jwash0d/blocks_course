@@ -11,3 +11,20 @@ p low_scores
 puts scores.any? { |n| n < 70}
 
 puts scores.detect { |n| n < 70}
+
+puts "------"
+
+scores_doubled = scores.map { |n| n * 2  }
+puts scores_doubled
+
+puts "------"
+
+total = scores.reduce(0) { |sum, n| sum += n}
+puts "Total score: #{total}"
+
+evens, odds = scores.partition { |n| n.even? }
+
+puts evens
+p evens
+puts odds
+p odds
